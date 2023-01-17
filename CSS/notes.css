@@ -1,0 +1,127 @@
+/*  -------toolbar--------- */
+.dropdown_note{
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    top: 29vh;
+    left: -30vh;
+    background-color: #212222ef;
+    box-shadow: 0px 8px 16px 0px rgba(8, 8, 8, 0.2);
+    transition: ease-in 0.7s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem;
+}
+.noteOption{
+    height: 40%;
+    width: 15%;
+    border-radius: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.pink{
+    background-color: #fa789d;
+}
+.yellow{
+    background-color: #f8d574;
+}
+.lightred{
+    background-color: #f5957d;
+}
+.lightblue{
+    background-color: #70f3a4;
+}
+.lightgreen{
+    background-color: #7afced;
+}
+
+/* -------note design----- */
+.sticky_notes{
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(197, 195, 195);
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086);
+    animation: animateNote 1s ease-in forwards;
+}
+.navBar{
+    height: 1.5rem;
+    width: 15rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #161516e1;
+    cursor: grab;
+}
+.nIcon{
+    height: 20px;
+    width: 25px;
+    border-radius: 20%;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(238, 242, 247);
+    cursor: pointer;
+}
+.delete{
+    font-size: 1.3rem;
+}
+.activeMini{
+    animation: mini 1s ease-in forwards;
+}
+.nIcon:hover{
+    background-color: #4b4d4def;
+    cursor: pointer;
+}
+.activeNIcon{
+    background-color: #484949;
+}
+.mainArea{
+    height: 10rem;
+    width: 15rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: sans-serif
+}
+h2{
+    height: 28%;
+    width: 100%;
+    margin: 0;
+    font-size: 2rem;
+    outline: none;
+}
+.textArea{
+    height: 75%;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    outline: none;
+    overflow: auto;
+    background-color: rgba(230, 222, 222, 0.26);
+}
+.textArea::-webkit-scrollbar {
+    display: none;
+}
+@keyframes animateNote {
+    0%{
+        transform: scale(0);
+    }
+    90%{
+        transform: scale(0.9);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

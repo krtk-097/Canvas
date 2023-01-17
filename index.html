@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/pencil.css">
+    <link rel="stylesheet" href="CSS/notes.css">
+    <link rel="stylesheet" href="CSS/images.css">
+    <link rel="stylesheet" href="CSS/shapes.css">
+</head>
+
+<body>
+    <div class="heading_container">
+        <div class="logo">
+            <!-- <h1>Adding light / dark themes</h1> -->
+<button id="theme-switcher">DARK</button>
+        </div>
+        <div class="title">CANVAS DRAWING BOARD</div>
+    </div>
+    <div class="working_area">
+        <div class="toolbar_container ">
+            <div class="draw_material">
+                <div class="tool pencil ">
+                    <div class="img_box">
+                        <img src="images/pencil.png">
+                    </div>
+                    <h4>Pencil</h4>
+                </div>
+                <div class="dropdown_pencil">
+                    <div class="slidecontainer">
+                        <input type="range" min="2" max="15" value="2" class="slider" id="pSlider">
+                    </div>
+                    <div class="color_box">
+                        <div class="red" id="option"></div>
+                        <div class="blue" id="option"></div>
+                        <div class="green" id="option"></div>
+                        <div class="black active_color" id="option"></div>
+                    </div>
+                </div>
+                <div class="tool eraser">
+                    <div class="img_box">
+                        <img src="images/eraser.png">
+                    </div>
+                    <h4>Eraser</h4>
+                </div>
+                <div class="dropdown_eraser">
+                    <div class="slidecontainer">
+                        <input type="range" min="5" max="20" value="5" class="slider" id="eSlider">
+                    </div>
+                </div>
+                <div class="tool shape">
+                    <div class="img_box">
+                        <img src="images/blocks.jpg">
+                    </div>
+                    <h4>Shapes</h4>
+                </div>
+                <div class="dropdown_shape">
+                    <div class="shapes">
+                        <div class="fillsquare shape_icon">
+                            <i class="fas fa-square"></i>
+                        </div>
+                        <div class="square shape_icon active_shape">
+                            <i class="far fa-square"></i>
+                        </div>
+                        <div class="fillcircle shape_icon">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div class="circle shape_icon">
+                            <i class="far fa-circle"></i>
+                        </div>
+                    </div>
+                    <div class="shape_color">
+                        <div class="pink shapeOption"></div>
+                        <div class="lightred shapeOption"></div>
+                        <div class="yellow shapeOption"></div>
+                        <div class="lightgreen shapeOption"></div>
+                        <div class="lightblue shapeOption"></div>
+                        <div class="black shapeOption"></div>
+
+                    </div>
+                </div>
+                <div class="tool notes">
+                    <div class="img_box">
+                        <img src="images/notepad.png">
+                    </div>
+                    <h4>Notes</h4>
+                </div>
+                <div class="dropdown_note">
+                    <div class="pink noteOption"></div>
+                    <div class="lightred noteOption"></div>
+                    <div class="yellow noteOption"></div>
+                    <div class="lightblue noteOption"></div>
+                    <div class="lightgreen noteOption"></div>
+                </div>
+                <div class="tool undo">
+                    <div class="img_box">
+                        <img src="images/undo.png">
+                    </div>
+                    <h4>Undo</h4>
+                </div>
+                <div class="tool redo">
+                    <div class="img_box">
+                        <img src="images/redo.png">
+                    </div>
+                    <h4>Redo</h4>
+                </div>
+            </div>
+            <div class="seperator"></div>
+            <div class="prop">
+                <div class="tool new">
+                    <div class="img_box">
+                        <img src="images/new.jpg" alt="">
+                    </div>
+                    <h4>New Page</h4>
+                </div>
+                <div class="tool upload">
+                    <input type="file" name="" id="" class="image_input" accept="image/*">
+                    <div class="img_box">
+                        <img src="images/upload.jpg">
+                    </div>
+                    <h4>Upload</h4>
+                </div>
+                <div class="tool download">
+                    <div class="img_box">
+                        <img src="images/download.png">
+                    </div>
+                    <h4>Download</h4>
+                </div>
+                <div class="tool zoom_in">
+                    <div class="img_box">
+                        <img src="images/zoom-in.png">
+                    </div>
+                    <h4>Zoom In</h4>
+                </div>
+                <div class="tool zoom_out">
+                    <div class="img_box">
+                        <img src="images/zoom-out.png">
+                    </div>
+                    <h4>Zoom Out</h4>
+                </div>
+            </div>
+            <div class="seperator"></div>
+        </div>
+        <div class="canvas_area">
+            <canvas class="canvas" id="canvas"></canvas>
+        </div>
+    </div>
+    <script src="JS/initial.js" defer></script>
+    <script src="JS/draw.js" defer></script>
+    <script src="JS/notes.js" defer></script>
+    <script src="JS/shapes.js"defer></script>
+    <script src="JS/images.js" defer></script>
+    <script src="JS/endTools.js" defer></script>
+    
+</body>
+
+</html>
